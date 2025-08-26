@@ -21,7 +21,11 @@ jobs:
 
       - name: Check dir existence
         run: cd apps/router
+      
+      - name:
         run: dir
+
+      - name:
         run: cd dist
 
       - name: Upload artifact
