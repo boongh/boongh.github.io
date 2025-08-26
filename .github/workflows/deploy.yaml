@@ -16,11 +16,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: List dependencies check
-        run: npm list
-
       - name: Build site
-        run: npx turbo build --filter=portfolio
+        run: npx turbo build
+
+      - name: Check dir existence
+        run: cd apps/router
+        run: dir
+        run: cd dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
