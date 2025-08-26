@@ -20,7 +20,7 @@ jobs:
         run: npx turbo build
 
       - name: Check dir existence
-        run: ls -la
+        run: tree
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
