@@ -25,4 +25,4 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './apps/router/dist'
+          path: './apps/Router/dist'
