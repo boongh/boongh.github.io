@@ -20,7 +20,7 @@ jobs:
         run: npm list
 
       - name: Build site
-        run: turbo run build --filter=portfolio
+        run: npx turbo build --filter=portfolio
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
