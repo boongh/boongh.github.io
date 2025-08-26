@@ -20,31 +20,7 @@ jobs:
         run: npx turbo build
 
       - name: Check dir existence
-        run: cd apps
-
-      - name:
-        run: dir
-      
-      - name: Check dir existence
-        run: cd apps
-
-      - name:
-        run: dir
-
-      - name: Check dir existence 2
-        run: cd routers
-
-      - name:
-        run: dir
-
-      - name:
-        run: cd dist
-
-      - name:
-        run: dir
-      
-      - name:
-        run: cd ../../..
+        run: ls -la
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
