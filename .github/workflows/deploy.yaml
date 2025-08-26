@@ -16,6 +16,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: List dependencies check
+        run: npm list
+
       - name: Build site
         run: turbo run build --filter=portfolio
 
