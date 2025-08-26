@@ -1,5 +1,5 @@
 // App.jsx
-import { Outlet, createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Link } from 'react-router-dom';
+import { Outlet, createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Link, createHashRouter } from 'react-router-dom';
 import Home from './pages/home'; // Assuming you move these to separate files
 import Aboutme from './pages/aboutme'; // Assuming you move these to separate files
 import LetterBoxed from './pages/letterboxed';
@@ -42,6 +42,10 @@ function RootLayout() {
           "duration-100 rounded-2xl w-fit p-2 pl-4 pr-4 m-0",
           "hover:bg-black/10"
         )}>About Me</Link>
+        <Link to="https://www.discord.com" className = {cn(
+          "duration-100 rounded-2xl w-fit p-2 pl-4 pr-4 m-0",
+          "hover:bg-black/10"
+        )}>Discord</Link>
         <ul
         className = {cn(
           "relative group duration-100 rounded-2xl w-fit p-2 pl-4 pr-4 m-0",
@@ -50,7 +54,7 @@ function RootLayout() {
         > 
           <span className='cursor-pointer'>Games</span>
           <div className='grow bg-blue-300 absolute overflow-y-hidden max-h-0 group-hover:max-h-screen duration-800 w-fit'>
-            <Link to="/games/letterboxedunlimited">Letter Boxed</Link>
+            <Link to="/games/letterboxedunlimited" className="text-nowrap">Letter Boxed</Link>
           </div>
         </ul>
       </nav>
@@ -61,7 +65,7 @@ function RootLayout() {
 }
 
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <>
     <Route path="/" element = {<RootLayout/>}>
