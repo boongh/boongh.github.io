@@ -25,6 +25,12 @@ jobs:
       - name:
         run: dir
       
+      - name: Check dir existence
+        run: cd apps
+
+      - name:
+        run: dir
+
       - name: Check dir existence 2
         run: cd routers
 
