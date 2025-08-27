@@ -1,0 +1,30 @@
+{
+    "alphabets" : {
+        "all" : ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+        "vowels" : ["A", "E", "I", "O", "U", "Y"]
+    },
+    "GridAttribute" : {
+        "width": 240,
+        "height": 240,
+        "outlineColor": "#000000",
+        "outlineWidth": 5,
+        "fillColor": "#ffffff",
+        "dotRadius": 7,
+        "dotOutlineColor": "#000000",
+        "dotFillColor": "#ffffff",
+        "dotOutlineWidth": 5,
+        "connectedDotRadius": 7,
+        "connectedDotOutlineColor": "#ff8566",
+        "connectedDotFillColor": "#ffffff",
+        "connectedDotOutlineWidth": 5,
+        "lineColor": "#000000",
+        "lineWidth": 3,
+        "confirmedLineColor" : "#000000",
+        "confirmedLineWidth": 3,
+        "outlineDash": [5, 5],
+        "dotDash": [],
+        "lineDash": [5, 5],
+        "confirmedLineDash": []
+    }
+
+}
