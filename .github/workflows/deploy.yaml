@@ -17,7 +17,7 @@ jobs:
         run: tree
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build site
         run: npx turbo build --filter=portfolio #router package to be built. Use package name
