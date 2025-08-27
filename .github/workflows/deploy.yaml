@@ -13,16 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Installing node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
       - name: Dir check
         run: tree
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build site
         run: npx turbo build --filter=portfolio #router package to be built. Use package name
@@ -30,7 +25,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './apps/Router/dist'
+          path: './apps/router/dist'
 
   # Deploy job
   deploy:
