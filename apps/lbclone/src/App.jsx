@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { cn } from './cn.jsx'
-import Grid from './component/Grid.jsx'
+import Grid from './component/grid.jsx'
 import InputField from './component/inputfield.jsx'
 import WordsList from './component/wordsList.jsx'
 import ConfigData from './component/data.jsx'
