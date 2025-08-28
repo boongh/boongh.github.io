@@ -1,5 +1,5 @@
 import { Router } from "react-router-dom"
-import LetterBoxed  from "./games/letterboxed"
+import LetterBoxed  from "./gamesapps/letterboxed.jsx"
 
 
 const AllGames = {
