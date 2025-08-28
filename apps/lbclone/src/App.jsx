@@ -8,7 +8,7 @@ import { ConnectionConstructor, ConnectionValidator, FilterString, CheckValidWor
 
 
 const DatamuseAPI = "https://api.datamuse.com/"
-const RandomWordAPI = "https://random-word-api.herokuapp.com/word?number=100";
+const RandomWordAPI = "https://random-word-api.vercel.app/api?words=100";
 const DictionaryAPI = "https://freedictionaryapi.com/api/v1/entries/en/"
 
 //Guarantees to return an array of return 12 letters that can be solved
@@ -156,6 +156,9 @@ function App() {
                 setconnections([]);
               }}
               OnRefresh={() => {
+                setTextField("");
+                setWordsList([]);
+                setconnections([]);
                 GeneratePuzzle();
               }}
               onSubmit={async () => {

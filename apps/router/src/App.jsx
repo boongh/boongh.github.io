@@ -1,32 +1,12 @@
 // App.jsx
-import { Outlet, createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Link, createHashRouter } from 'react-router-dom';
+import { Outlet, createRoutesFromElements, Route, RouterProvider, Link, createHashRouter } from 'react-router-dom';
 import Home from './pages/home'; // Assuming you move these to separate files
 import Aboutme from './pages/aboutme'; // Assuming you move these to separate files
-import LetterBoxed from './pages/letterboxed';
+import LetterBoxed from './pages/gamesapps/letterboxed';
 import { cn } from './cn';
+import { AnimatePresence } from 'motion/react';
+import Games from './pages/games';
 
-const NavBarRoutes = 
-[
-  {
-    name : "Home",
-    url : "/",
-    content: <Home/>,
-    icon:null
-  },
-  {
-    name : "About Me",
-    url : "/aboutme",
-    content: <Aboutme/>,
-    icon:null
-  },
-  {
-    name : "Letter Boxed",
-    url : "games/letterboxedunlimited",
-    content: <LetterBoxed/>,
-    icon:null
-  },
-  
-]
 
 // You will also need a Layout component or to define a root route element
 // For this example, let's assume a basic layout component.
@@ -42,10 +22,6 @@ function RootLayout() {
           "duration-100 rounded-2xl w-fit p-2 pl-4 pr-4 m-0",
           "hover:bg-black/10"
         )}>About Me</Link>
-        <Link to="https://www.discord.com" className = {cn(
-          "duration-100 rounded-2xl w-fit p-2 pl-4 pr-4 m-0",
-          "hover:bg-black/10"
-        )}>Discord</Link>
         <ul
         className = {cn(
           "relative group duration-100 rounded-2xl w-fit p-2 pl-4 pr-4 m-0",
@@ -70,8 +46,11 @@ const router = createHashRouter(
     <>
     <Route path="/" element = {<RootLayout/>}>
       <Route index element={<Home/>}/>
-      <Route path="aboutme" element = {<Aboutme/>}/>
-      <Route path="games/letterboxedunlimited" element={<LetterBoxed/>}/>
+      <Route path="aboutme/" element = {<Aboutme/>}/>
+      <Route path="games/">
+        <Route index element={<Games/>}/>
+        <Route path="/games/letterboxedunlimited" element = {<LetterBoxed/>}/>
+      </Route>
     </Route>
     </>
   )
